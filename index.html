@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> NostalGia Hotel </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Hotel.css">
+    <link rel="shortcut icon" href="logo.gif">
+</head>
+
+<body>
+    <div id="top-container">
+        <div id="logo">
+            <a href="index.html"> <img src="logo.gif" alt="NosatlGia Logo" width=250 height=150> </a>
+        </div>
+        <a href="#" id="signButton"> Sign in/up </a>
+        <nav class="navbar">
+             <div class="dropdown">
+                <button class="dropbtn" > <a href="index.html"> Home </a> </button>
+             </div>
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Hotel.html"  target="_blank"> Hotel </a></button>
+                <div class="dropdown-content">
+                    <a href="hotel.html#sharm"> Sharm Elshekh </a>
+                    <a href="hotel.html#paris"> Paris </a>
+                    <a href="hotel.html#venice"> Venice </a>
+                    <a href="hotel.html#england"> England </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Event.html"  target="_blank"> Event </a></button>
+                <div class="dropdown-content">
+                    <a href="event.html#business"> Business Meetings </a>
+                    <a href="event.html#weeding"> Weddings </a>
+                    <a href="event.html#social"> Social Events </a>
+                    <a href="event.html#group"> Group Travel </a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="Career.html" target="_blank"> Career </a></button>
+            </div>
+            <div class="dropdown">
+                <button class="dropbtn"> <a href="about.html"  target="_blank"> About NostalGia </a></button>
+            </div>
+            <div id="SearchBar">
+                <input type="text" placeholder="Search..">
+            </div>
+        </nav>
+        <div id="background-img">
+            <h1> Welcome to NostalGia Hotels </h1>
+        </div>
+    </div>
+    <br> <br> <br>
+        <div class="gallerycontainer">
+                <div class="slideshowcontainer">
+                    <div class="leftArrow" onclick="plusSlides(-1)"> <span class="arrow arrowLeft"></span></div>
+                    <div class="rightArrow" onclick="plusSlides(1)"> <span class="arrow arrowRight"></span></div>
+                    <div class="imageHolder">
+                         <img src="1.jpg" alt="Swimming Pool">
+                    </div>
+                    <div class="imageHolder">
+                         <img src="2.jpg" alt="Room">
+                    </div>
+                     <div class="imageHolder">
+                         <img src="3.jpg" alt="Hotel View">
+                      </div>
+                    <div class="imageHolder">
+                        <img src="4.jpg" alt="Hotel View">
+                    </div>
+                    <div class="imageHolder">
+                         <img src="5.jpg" alt="Hotel View">
+                     </div>
+                     <div class="imageHolder">
+                         <img src="6.jpg" alt="Table">
+                     </div>
+                     <div class="imageHolder">
+                         <img src="7.jpg" alt="Sea view">
+                     </div>
+                </div>
+                <div id="dotsContainer"></div>
+            </div>
+            
+            <div class="signinModal">
+                <div class="signinModal-content">
+                    <a href="index.html" class="close" > + </a>
+                    <h1> Sign In </h1>
+                    <form>
+                        <input type="text" placeholder="E-mail">
+                        <input type="password" placeholder="Password">
+                        <a href="#" class="signinButton"> Sign in </a>
+                        <a href="#" class="signupButton"> Creat account </a>
+                    </form>
+                </div>
+            </div>
+            <script src="function.js"></script>
+            <br> <br> <br>
+            <div id="quote">
+                    <p> The NostalGia Hotel is the right choice for visitors who are searching for a combination of charm, peace and <br> quiet, and a convenient position for whose want to relax. It is comfortable hotel. The family of hotel and the <br> staff offer an attentive, personalized service and are always available to offer any help to guests. </p>
+                    <h3> NotalGia </h3>
+                    <h1> Resort </h1>
+                    <img style="position: absolute; left: 40px" src="wifi.gif" alt="Free Wifi" width=150 height=150> 
+                    <img style="position: absolute; left: 40px; top: 160px" src="bed.png" alt="Bed" width=150 height=150> 
+                    <img style="position: absolute; right: 50px" src="phone.png" alt="Phone" width=150 height=150>
+                    <img style="position: absolute; right: 50px; top: 160px" src="tag.png" alt="Tag" width=150 height=150> 
+             </div>
+            <br> <br> <br>
+            <hr id="hr">
+    </body>
+
+    <footer>
+        <p>Copyright &copy; 2019 NostalGia International , Inc. All Rights Reserved. NostalGia Proprietary Information <br> <br> Telephone number +21060917380 &nbsp; &nbsp; Fax number +4379569679  &nbsp; &nbsp; E-mail: NostalGiaHotels@yahoo.com <br> <br> NEW CAIRO <br> <span style="position: absolute; bottom: -5px">75 Road 90 5th settlement</span> </p>
+        <div id="footer">
+            <h5> Follow Us </h5>
+            <a href="https://www.facebook.com/"> <img style="left: 480px;" src="facebook.png" alt="facebook icon"> </a>
+            <a href="https://twitter.com/"> <img style="left: 540px;" src="twitter.png" alt="twitter icon"> </a> 
+            <a href="https://www.youtube.com/" > <img style="left: 600px;" src="youtube.png" alt="youtupe icon"> </a>
+        </div>
+    </footer>
+</html>

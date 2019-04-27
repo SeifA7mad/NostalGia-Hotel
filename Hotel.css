@@ -1,0 +1,1935 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: whitesmoke;
+  margin: auto;
+}
+
+#top-container {
+  position: relative;
+}
+
+#background-img {
+  background-image: url("hotel.jpg");
+  background-position: center;
+  background-color: #cccccc;
+  height: 300px;
+  background-size: cover;
+}
+
+#logo {
+  position: absolute;
+  float: left;
+  left: 140px;
+}
+
+#signButton {
+  position: absolute;
+  background-color: whitesmoke;
+  border: 5px soild deepskyblue;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 28px;
+  color: black;
+  margin-top: 10px;
+  display: inline-block;
+  right: 400px;
+  font-size: 15px;
+  font-style: italic;
+}
+#signButton:hover {
+  background-color: deepskyblue;
+}
+
+.signinModal {
+  width: 100%;
+  height: 200%;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  display: none;
+}
+.signinModal-content {
+  width: 650px;
+  height: 350px;
+  background-color: white;
+  margin-top: 280px;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+.signinModal .signinModal-content h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 45px;
+  text-decoration-line: underline;
+}
+.signinButton {
+  position: absolute;
+  background-color: whitesmoke;
+  border: 1px solid deepskyblue;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 28px;
+  color: black;
+  margin-top: 10px;
+  display: inline-block;
+  right: 400px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.signinButton:hover {
+  background-color: deepskyblue;
+}
+.signinModal .signinModal-content input {
+  width: 50%;
+  display: block;
+  margin: 15px auto;
+}
+.signupButton {
+  position: absolute;
+  background-color: whitesmoke;
+  border: 1px solid deepskyblue;
+  border-radius: 30px;
+  text-decoration: none;
+  padding: 10px 28px;
+  color: black;
+  margin-top: 10px;
+  display: inline-block;
+  right: 200px;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+}
+.signupButton:hover {
+  background-color: deepskyblue;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 42px;
+  transform: rotate(45deg);
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.navbar {
+  float: right;
+  overflow: hidden;
+  width: 80%;
+}
+.navbar a {
+  float: center;
+  font-size: 16px;
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+.dropdown .dropbtn {
+  font-size: 23px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  }
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: deepskyblue;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+#SearchBar {
+  position: absolute;
+  float: right;
+  right: 175px;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+#background-img h1 { 
+  color: white;
+  font-style: italic;
+  font-size: 40px;
+  font-family: Times New Roman Georgia;
+  margin: auto;
+  width: 50%;
+  border: 3px black;
+  padding: 150px 0px 0px 550px; 
+  text-align: left;
+}
+
+.gallerycontainer{
+  width: 100%;
+  height: 700px;
+  max-width: 80%;
+  user-select: none;
+  box-shadow: 0px 0px 3px 1px #00000078;
+  padding: 10px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.gallerycontainer .slideshowcontainer{
+  width :100%;
+  height:90%;
+  overflow:hidden;
+  position: relative;
+}
+.gallerycontainer .slideshowcontainer .imageHolder {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+}
+.gallerycontainer .slideshowcontainer .imageHolder img{
+  width: 100%;
+  height: 100%;
+}
+
+.gallerycontainer .slideshowcontainer .leftArrow, .gallerycontainer .slideshowcontainer .rightArrow {
+  width: 50px;
+  background: #00000036;
+  position: absolute;
+  left: 0;
+  transition: background 0.5s;
+  z-index: 1;
+  height: 72px;
+  top: 325px;
+  transform: translateY(-50%);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.gallerycontainer .slideshowcontainer .rightArrow {
+  left: auto;
+  right: 0;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.gallerycontainer .slideshowcontainer .leftArrow:hover, .gallerycontainer .slideshowcontainer .rightArrow:hover{
+  background: #000000a8;
+  cursor: pointer;
+}
+.gallerycontainer .slideshowcontainer .arrow{
+  display: inline-block;
+  border: 3px solid white;
+  width: 10px;
+  height: 10px;
+  border-left: none;
+  border-bottom: none;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.gallerycontainer .slideshowcontainer .arrow.arrowLeft{
+  transform: rotateZ(-135deg);
+}
+.gallerycontainer .slideshowcontainer .arrow.arrowRight{
+  transform: rotateZ(45deg);
+}
+.gallerycontainer #dotsContainer {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.gallerycontainer #dotsContainer .dots {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin-left: 10px;
+  background-color: #bbb;
+  cursor: pointer;
+  transition: background-color 0.5s;
+}
+.gallerycontainer #dotsContainer .dots:hover,.gallerycontainer #dotsContainer .dots.active {
+  background-color: #717171;
+}
+.gallerycontainer #dotsContainer .dots:first-child {
+  margin-left: 0;
+}
+
+.gallerycontainer .moveLeftCurrentSlide {
+  animation-name: moveLeftCurrent;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+.gallerycontainer .moveLeftNextSlide {
+  animation-name: moveLeftNext;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes moveLeftCurrent{
+  from{
+    margin-left: 0;
+    opacity: 1;
+  }
+  to{
+    margin-left: -100%;
+    opacity: 1;
+  }
+}
+@keyframes moveLeftNext{
+  from{
+    margin-left: 100%;
+    opacity: 1;
+  }
+  to{
+    margin-left: 0%;
+    opacity: 1;
+  }
+}
+.gallerycontainer .moveRightCurrentSlide {
+  animation-name: moveRightCurrent;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes moveRightCurrent {
+  from{
+    margin-left: 0;
+    opacity: 1;
+  }
+  to{
+    margin-left: 100%;
+    opacity: 1;
+  }
+}
+.gallerycontainer .moveRightPrevSlide {
+  animation-name: moveRightNext;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+@keyframes moveRightNext {
+  from{
+    margin-left: -100%;
+    opacity: 1;
+  }
+  to{
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+ #quote {
+  position: relative;
+  background-image: url("black.png");
+  float: center;
+  left: 185px;
+  width: 100%;
+  height: 300px;
+  max-width: 80%;
+  border-radius: 25px;
+}
+
+#quote p {
+  position: absolute;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  color: white;
+  float: center;
+  left: 300px;
+  top: 160px;
+}
+
+#quote h3 {
+  position: absolute;
+  left: 700px;
+  top: 10px;
+  float: center;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 30px;
+}
+#quote h1 {
+  position: absolute;
+  left: 650px;
+  bottom: 130px;
+  color: white;
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 70px;
+}
+
+#carrerList {
+  position: relative;
+  float: center;
+  max-width: 76%;
+  left: 215px; 
+  border-style: outset;
+  border-color: white;
+  border-width: 10px;
+  padding-left: 20px;
+  box-shadow: 10px 10px 10px #00000033;
+  padding-bottom: 130px;
+}
+#carrerList dt {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  color: black;
+  margin-top: 60px;
+  font-style: italic;
+  font-weight: bold;
+}
+#carrerList dd {
+  margin-top: 30px;
+  max-width: 70%;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding-left: 20px;
+  text-align: justify;
+  word-break: keep-all;
+  word-spacing: 2px;
+}
+#carrerList img {
+  border-radius: 20px;
+  float: right;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  border-style: outset;
+  border-color: whitesmoke;
+}
+#carrerList a {
+  position: absolute;
+  float: left;
+  left: 670px;
+  bottom: 20px;
+  border-style: outset;
+  border-color: deepskyblue;
+  border-width: 2px;
+  padding: 10px 30px 10px 30px;
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  font-style: oblique;
+}
+#carrerList a:hover {
+  background-color: deepskyblue;
+}
+#hr {
+  width: 1450px
+}
+#about {
+  position: relative;
+  max-width: 77%;
+  left: 210px;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 2px 2px 2px #00000033;
+}
+#about h3{
+  font-size: 40px;
+  font-style: italic;
+  text-shadow: 5px 5px 5px #00000033;
+}
+#about p {
+  text-align: justify;
+  font-size: 18px;
+  word-spacing: 1px;
+  color: #020748;
+}
+#about a {
+  position: absolute;
+  position: fixed;
+  left: 0px;
+}
+#map {
+  position: relative;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 500px;
+  height: 300px;
+  left: 1180px;
+}
+
+#content {
+  position: relative;
+  max-width: 80%;
+}
+
+.Holder {
+  position: absolute;
+  background-color: #E5E4E5;
+  float: center;
+  left: 350px;
+  width: 80%;
+  height: 240px;
+  border-style: outset;
+  border-color: white;
+  box-shadow: 10px 10px 10px #00000033;
+  font-family: 'Times New Roman', Times, serif;
+}
+.Holder img {
+  position: absolute;
+  float: left;
+  width: 300px;
+  height: 155px;
+  border-radius: 5px;
+}
+.Holder .imglogo {
+  position: absolute;
+  float: left;
+  right: 0;
+  width: 250px;
+  height: 150px;
+}
+.Holder h2 {
+  position: absolute;
+  left: 320px;
+}
+.Holder p {
+  position: absolute;
+  left: 320px;
+  top: 40px;
+}
+.Holder .info {
+  top: 70px;
+  font-size: 14px;
+}
+.Holder hr {
+  position: relative;
+  top: 145px;
+}
+.Holder .price {
+  position: absolute;
+  left: 830px;
+  top: 165px;
+}
+.Holder .reservebtn {
+  position: absolute;
+  right: 50px;
+  top: 170px;
+  text-decoration: none;
+  color: white;
+  background-color: #505050;
+  padding: 15px;
+  padding-right: 35px;
+  padding-left: 35px;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Holder .reservebtn:hover {
+  background-color: #656464;
+}
+
+#app-form {
+  position: relative;
+  max-width: 80%;
+}
+#app-form h2 {
+  position: absolute;
+  left: 230px;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 5px 5px 5px #00000033;
+}
+#app-form form {
+  position: absolute;
+  left: 650px;
+  top: 110px;
+  border-style: outset;
+  background-color: whitesmoke;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 50px;
+  padding-bottom: 10px;
+}
+#app-form button {
+  position: absolute;
+  left: 450px;
+  width: 80px;
+  height: 25px;
+}
+
+#heading {
+  position: relative;
+  max-width: 80%;
+  margin-top: 20px;
+  left: 220px;
+}
+#heading img {
+  position: absolute;
+  float: left;
+}
+#heading h3 {
+  position: absolute;
+  float: right;
+  left: 50px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: 30px;
+  bottom: -72.5px;
+  font-style: italic;
+}
+
+.reserve {
+  position: relative;
+  max-width: 760px;
+  border-radius: 5px;
+  border-color: #E6E6E6;
+  border-style: solid;
+  left: 600px;
+  top: 100px;
+  padding-bottom: 320px;
+}
+.reserve .top-content {
+  position: absolute;
+  background-color: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  border-bottom-style: solid;
+  border-color: #E6E6E6;
+  padding-right: 760px;
+  padding-bottom: 60px;
+}
+.reserve .bottom-content {
+  position: absolute;
+  background-color: #F2F1F1;
+  top: 61px;
+  padding-right: 760px;
+  padding-bottom: 259px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.reserve .top-content img {
+  position: absolute;
+  top: 5px;
+  padding-left: 3px;
+}
+.reserve .top-content h2 {
+  position: absolute;
+  left: 60px;
+}
+.reserve .bottom-content form {
+  position: absolute;
+  padding-left: 5px;
+}
+.reserve .bottom-content .right-content {
+  position: absolute;
+  left: 450px;
+  padding-left: 0;
+  bottom: -10px;
+}
+.reserve .bottom-content h2 {
+  position: absolute;
+  width: 250px;
+  top: 100px;
+  font-weight: bold;
+}
+.reserve .bottom-content h3 {
+  position: absolute;
+  left: 250px;
+  top: 130px;
+  font-size: 25px;
+  color: black;
+}
+.reserve .bottom-content h3:hover {
+  color: deepskyblue;
+}
+#reserveNowbtn {
+  position: absolute;
+  margin-top: 20px;
+  width: 515px;
+  height: 30px;
+  left: 110px;
+  top: 250px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #E6E6E6;
+  padding: 16px 0px 29px 0px;
+  background-color: white;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+#reserveNowbtn:hover {
+  background-color: deepskyblue;
+}
+
+#contact {
+  position: fixed;
+  right: 20px;
+  bottom: 0;
+  text-decoration: none;
+  color: deepskyblue;
+  background-color: white;
+  padding: 20px 35px 15px 35px;
+  border-style: outset;
+  border-color: deepskyblue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+#contact:hover {
+  background-color: #ACABAB;
+}
+
+#contact-content {
+  position: absolute;
+  max-width: 80%;
+}
+#contact-content h2 {
+  position: absolute;
+  width: 500px;
+  left: 800px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 45px;
+  font-style: italic;
+}
+#contact-content img {
+  position: absolute;
+  left: 350px;
+  top: 200px;
+}
+#contact-content form {
+  position: absolute;
+  display: block;
+  left: 900px;
+  top: 210px;
+}
+#contact-content input {
+  margin-top: 20px;
+  width: 500px;
+  height: 30px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #E6E6E6;
+  padding-left: 10px;
+}
+#contact-content button {
+  margin-top: 20px;
+  width: 515px;
+  height: 30px;
+  border-style: solid;
+  border-radius: 15px;
+  border-color: #E6E6E6;
+  padding: 16px 0px 29px 0px;
+  background: -webkit-linear-gradient(left, #9863c6 19%,#7db9e8 53%);
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+#contact-content button:hover {
+  background: -webkit-linear-gradient(left, #8137c2 19%,#4ba2e4 53%);
+}
+
+footer {
+  position: absolute; 
+  left: 200px
+}
+#footer {
+  position: relative;
+}
+#footer h5 {
+  position: absolute;
+  font-size: 25px;
+  top: -35px;
+  left: 500px;
+  text-align: center;
+  color: white;
+  background-color: #1E0101;
+  padding: 2px;
+}
+#footer img {
+  position: absolute;
+  float: center;
+  top: 50px;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1600px) {
+  #logo {
+    position: absolute;
+    float: left;
+    left: 95px;
+    }
+    #background-img h1 { 
+      color: white;
+      font-style: italic;
+      font-size: 40px;
+      font-family: Times New Roman Georgia;
+      margin: auto;
+      width: 50%;
+      border: 3px black;
+      padding: 150px 0px 0px 320px; 
+    }
+    #top-container .navbar #SearchBar {
+      position: absolute;
+      float: right;
+      right: 137px;
+      padding: 6px;
+      border: none;
+      margin-top: 8px;
+      margin-right: 16px;
+      font-size: 17px;
+    }
+    #quote {
+      position: relative;
+      background-image: url("black.png");
+      float: center;
+      left: 152px;
+      width: 120%;
+      height: 300px;
+      max-width: 80.5%;
+      border-radius: 25px;
+    }
+    #quote p {
+      position: absolute;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 16.5px;
+      color: white;
+      float: center;
+      left: 260px;
+      top: 160px;
+      text-align: justify;
+    }
+    #quote h3 {
+      position: absolute;
+      left: 590px;
+      top: 10px;
+      float: center;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-size: 30px;
+    }
+    #quote h1 {
+      position: absolute;
+      left: 540px;
+      bottom: 130px;
+      color: white;
+      font-family: 'Times New Roman', Times, serif;
+      font-style: italic;
+      font-size: 70px;
+    }
+    #carrerList {
+      position: relative;
+      float: center;
+      max-width: 76%;
+      left: 215px; 
+      border-style: outset;
+      border-color: white;
+      border-width: 10px;
+      padding-left: 20px;
+      box-shadow: 10px 10px 10px #00000033;
+      padding-bottom: 130px;
+    }
+    #carrerList dt {
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 30px;
+      color: black;
+      margin-top: 60px;
+      font-style: italic;
+      font-weight: bold;
+    }
+    #carrerList dd {
+      margin-top: 30px;
+      max-width: 70%;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 20px;
+      padding-left: 20px;
+      text-align: justify;
+      word-break: keep-all;
+      word-spacing: 2px;
+    }
+    #carrerList img {
+      border-radius: 20px;
+      float: right;
+      margin-right: 40px;
+      margin-bottom: 15px;
+      border-style: outset;
+      border-color: whitesmoke;
+    }
+    #carrerList a {
+      position: absolute;
+      float: left;
+      left: 670px;
+      bottom: 20px;
+      border-style: outset;
+      border-color: deepskyblue;
+      border-width: 2px;
+      padding: 10px 30px 10px 30px;
+      background-color: white;
+      color: black;
+      text-decoration: none;
+      font-style: oblique;
+    }
+    #hr {
+      width: 1200px
+    }
+  
+    #about {
+      position: relative;
+      max-width: 77%;
+      left: 162px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .Holder {
+      position: absolute;
+      background-color: #E5E4E5;
+      float: center;
+      left: 220px;
+      width: 90%;
+      height: 240px;
+      border-style: outset;
+      border-color: white;
+      box-shadow: 10px 10px 10px #00000033;
+      font-family: 'Times New Roman', Times, serif;
+    }
+    .Holder .imglogo {
+      position: absolute;
+      float: left;
+      right: -30px;
+      width: 250px;
+      height: 150px;
+    }
+    .Holder .price {
+      position: absolute;
+      left: 775px;
+      top: 165px;
+    }
+    .Holder .reservebtn {
+      position: absolute;
+      right: 20px;
+      top: 170px;
+      text-decoration: none;
+      color: white;
+      background-color: #505050;
+      padding: 15px;
+      padding-right: 35px;
+      padding-left: 35px;
+      font-weight: bold;
+      font-size: 20px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+  
+    #app-form h2 {
+      position: absolute;
+      left: 220px;
+      font-weight: bold;
+      font-size: 35px;
+      font-family: 'Times New Roman', Times, serif;
+      text-shadow: 5px 5px 5px #00000033;
+    }
+    #app-form form {
+      position: absolute;
+      left: 490px;
+      top: 110px;
+      border-style: outset;
+      background-color: whitesmoke;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 50px;
+      padding-bottom: 10px;
+    }
+  
+    #heading {
+      position: relative;
+      max-width: 80%;
+      margin-top: 20px;
+      left: 200px;
+    }
+    .reserve {
+      position: relative;
+      max-width: 760px;
+      border-radius: 5px;
+      border-color: #E6E6E6;
+      border-style: solid;
+      left: 450px;
+      top: 100px;
+      padding-bottom: 320px;
+    }
+    .reserve .top-content {
+      position: absolute;
+      background-color: white;
+      border-top-right-radius: 5px;
+      border-top-left-radius: 5px;
+      border-bottom-style: solid;
+      border-color: #E6E6E6;
+      padding-right: 760px;
+      padding-bottom: 60px;
+    }
+    .reserve .bottom-content {
+      position: absolute;
+      background-color: #F2F1F1;
+      top: 61px;
+      padding-right: 760px;
+      padding-bottom: 259px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+    #reserveNowbtn {
+      position: absolute;
+      margin-top: 20px;
+      width: 515px;
+      height: 30px;
+      left: 110px;
+      top: 250px;
+      border-style: solid;
+      border-radius: 15px;
+      border-color: #E6E6E6;
+      padding: 16px 0px 29px 0px;
+      background-color: white;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+    }
+  
+    #contact {
+      position: fixed;
+      right: 0px;
+      bottom: 0;
+      text-decoration: none;
+      color: deepskyblue;
+      background-color: white;
+      padding: 20px 35px 15px 35px;
+      border-style: outset;
+      border-color: deepskyblue;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    } 
+    #contact-content h2 {
+      position: absolute;
+      width: 500px;
+      left: 570px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 45px;
+      font-style: italic;
+    }
+    #contact-content img {
+      position: absolute;
+      left: 220px;
+      top: 200px;
+    }
+    #contact-content form {
+      position: absolute;
+      display: block;
+      left: 680px;
+      top: 210px;
+    }
+    #map {
+      position: relative;
+      margin-bottom: 20px;
+      margin-top: 20px;
+      width: 500px;
+      height: 300px;
+      left: 880px;
+    }
+}
+
+@media only screen and (max-width: 1440px) {
+  #logo {
+    position: absolute;
+    float: left;
+    left: 85px;
+  }
+  #background-img h1 { 
+    color: white;
+    font-style: italic;
+    font-size: 40px;
+    font-family: Times New Roman Georgia;
+    margin: auto;
+    width: 50%;
+    border: 3px black;
+    padding: 150px 0px 0px 200px; 
+  }
+  #SearchBar {
+    position: absolute;
+    float: right;
+    right: 130px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  #quote {
+    position: relative;
+    background-image: url("black.png");
+    float: center;
+    left: 135px;
+    width: 120%;
+    height: 300px;
+    max-width: 80.5%;
+    border-radius: 25px;
+  }
+  #quote h3 {
+    position: absolute;
+    left: 530px;
+    top: 10px;
+    float: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+  }
+  #quote h1 {
+    position: absolute;
+    left: 480px;
+    bottom: 130px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 70px;
+  }
+  #quote p {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16.5px;
+    color: white;
+    float: center;
+    left: 200px;
+    top: 160px;
+    text-align: center;
+  }
+  #carrerList {
+    position: relative;
+    float: center;
+    max-width: 76%;
+    left: 215px; 
+    border-style: outset;
+    border-color: white;
+    border-width: 10px;
+    padding-left: 20px;
+    box-shadow: 10px 10px 10px #00000033;
+    padding-bottom: 130px;
+  }
+  #carrerList dt {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: black;
+    margin-top: 60px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #carrerList dd {
+    margin-top: 30px;
+    max-width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: justify;
+    word-break: keep-all;
+    word-spacing: 2px;
+  }
+  #carrerList img {
+    border-radius: 20px;
+    float: right;
+    margin-right: 40px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+    border-style: outset;
+    border-color: whitesmoke;
+  }
+  #carrerList a {
+    position: absolute;
+    float: left;
+    left: 450px;
+    bottom: 20px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-width: 2px;
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+  }
+  #about {
+    position: relative;
+    max-width: 77%;
+    left: 160px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  #hr {
+    width: 1160px
+  }
+  #signButton {
+    position: absolute;
+    background-color: whitesmoke;
+    border: 5px soild deepskyblue;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    right: 360px;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .Holder {
+    position: absolute;
+    background-color: #E5E4E5;
+    float: center;
+    left: 150px;
+    width: 97%;
+    height: 240px;
+    border-style: outset;
+    border-color: white;
+    box-shadow: 10px 10px 10px #00000033;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .Holder .imglogo {
+    position: absolute;
+    float: left;
+    right: -30px;
+    width: 250px;
+    height: 150px;
+  }
+  .Holder .price {
+    position: absolute;
+    left: 740px;
+    top: 165px;
+  }
+  .Holder .reservebtn {
+    position: absolute;
+    right: 20px;
+    top: 170px;
+    text-decoration: none;
+    color: white;
+    background-color: #505050;
+    padding: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  #app-form h2 {
+    position: absolute;
+    left: 160px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px #00000033;
+  }
+  #app-form form {
+    position: absolute;
+    left: 400px;
+    top: 110px;
+    border-style: outset;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  #heading {
+    position: relative;
+    max-width: 80%;
+    margin-top: 20px;
+    left: 180px;
+  }
+  .reserve {
+    position: relative;
+    max-width: 730px;
+    border-radius: 5px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    left: 360px;
+    top: 100px;
+    padding-bottom: 320px;
+  }
+  .reserve .top-content {
+    position: absolute;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-style: solid;
+    border-color: #E6E6E6;
+    padding-right: 730px;
+    padding-bottom: 60px;
+  }
+  .reserve .bottom-content {
+    position: absolute;
+    background-color: #F2F1F1;
+    top: 61px;
+    padding-right: 730px;
+    padding-bottom: 259px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #reserveNowbtn {
+    position: absolute;
+    margin-top: 20px;
+    width: 515px;
+    height: 30px;
+    left: 110px;
+    top: 250px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #E6E6E6;
+    padding: 16px 0px 29px 0px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  #contact {
+    position: fixed;
+    right: 0px;
+    bottom: 0;
+    text-decoration: none;
+    color: deepskyblue;
+    background-color: white;
+    padding: 20px 35px 15px 35px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  } 
+  #contact-content h2 {
+    position: absolute;
+    width: 500px;
+    left: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-style: italic;
+  }
+  #contact-content img {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+  }
+  #contact-content form {
+    position: absolute;
+    display: block;
+    left: 600px;
+    top: 210px;
+  }
+  #map {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    left: 755px;
+  }
+}
+
+@media only screen and (max-width: 1366px){
+  #logo {
+  position: absolute;
+  float: left;
+  left: 80px;
+  }
+  .navbar {
+    float: right;
+    overflow: hidden;
+    width: 78%;
+  }
+  #background-img h1 { 
+    color: white;
+    font-style: italic;
+    font-size: 40px;
+    font-family: Times New Roman Georgia;
+    margin: auto;
+    width: 50%;
+    border: 3px black;
+    padding: 150px 0px 0px 300px; 
+  }
+  #top-container .navbar #SearchBar {
+    position: absolute;
+    float: right;
+    right: 120px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  #signButton {
+    position: absolute;
+    background-color: whitesmoke;
+    border: 5px soild deepskyblue;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    right: 140px;
+    top: 40px;
+    font-size: 15px;
+    font-style: italic;
+  }
+  #quote {
+    position: relative;
+    background-image: url("black.png");
+    float: center;
+    left: 130px;
+    width: 120%;
+    height: 300px;
+    max-width: 80.5%;
+    border-radius: 25px;
+  }
+  #quote p {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16.5px;
+    color: white;
+    float: center;
+    left: 190px;
+    top: 160px;
+    text-align: justify;
+  }
+  #quote h3 {
+    position: absolute;
+    left: 490px;
+    top: 10px;
+    float: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+  }
+  #quote h1 {
+    position: absolute;
+    left: 440px;
+    bottom: 130px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 70px;
+  }
+
+  #carrerList {
+    position: relative;
+    float: center;
+    max-width: 76%;
+    left: 215px; 
+    border-style: outset;
+    border-color: white;
+    border-width: 10px;
+    padding-left: 20px;
+    box-shadow: 10px 10px 10px #00000033;
+    padding-bottom: 130px;
+  }
+  #carrerList dt {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: black;
+    margin-top: 60px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #carrerList dd {
+    margin-top: 30px;
+    max-width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: justify;
+    word-break: keep-all;
+    word-spacing: 2px;
+  }
+  #carrerList img {
+    border-radius: 20px;
+    float: right;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    border-style: outset;
+    border-color: whitesmoke;
+  }
+  #carrerList a {
+    position: absolute;
+    float: left;
+    left: 400px;
+    bottom: 20px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-width: 2px;
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+  }
+  #hr {
+    width: 1180px
+  }
+
+  #about {
+    position: relative;
+    max-width: 77%;
+    left: 150px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+
+  .Holder {
+    position: absolute;
+    background-color: #E5E4E5;
+    float: center;
+    left: 160px;
+    width: 100%;
+    height: 240px;
+    border-style: outset;
+    border-color: white;
+    box-shadow: 10px 10px 10px #00000033;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .Holder .imglogo {
+    position: absolute;
+    float: left;
+    right: -30px;
+    width: 250px;
+    height: 150px;
+  }
+  .Holder .price {
+    position: absolute;
+    left: 720px;
+    top: 165px;
+  }
+  .Holder .reservebtn {
+    position: absolute;
+    right: 20px;
+    top: 170px;
+    text-decoration: none;
+    color: white;
+    background-color: #505050;
+    padding: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  #app-form h2 {
+    position: absolute;
+    left: 160px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px #00000033;
+  }
+  #app-form form {
+    position: absolute;
+    left: 400px;
+    top: 110px;
+    border-style: outset;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  #heading {
+    position: relative;
+    max-width: 80%;
+    margin-top: 20px;
+    left: 155px;
+  }
+  .reserve {
+    position: relative;
+    max-width: 730px;
+    border-radius: 5px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    left: 300px;
+    top: 100px;
+    padding-bottom: 320px;
+  }
+  .reserve .top-content {
+    position: absolute;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-style: solid;
+    border-color: #E6E6E6;
+    padding-right: 730px;
+    padding-bottom: 60px;
+  }
+  .reserve .bottom-content {
+    position: absolute;
+    background-color: #F2F1F1;
+    top: 61px;
+    padding-right: 730px;
+    padding-bottom: 259px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #reserveNowbtn {
+    position: absolute;
+    margin-top: 20px;
+    width: 515px;
+    height: 30px;
+    left: 110px;
+    top: 250px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #E6E6E6;
+    padding: 16px 0px 29px 0px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+  }
+
+  #contact {
+    position: fixed;
+    right: 0px;
+    bottom: 0;
+    text-decoration: none;
+    color: deepskyblue;
+    background-color: white;
+    padding: 20px 35px 15px 35px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  } 
+  #contact-content h2 {
+    position: absolute;
+    width: 500px;
+    left: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-style: italic;
+  }
+  #contact-content img {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+  }
+  #contact-content form {
+    position: absolute;
+    display: block;
+    left: 600px;
+    top: 210px;
+  }
+  #map {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 500px;
+    height: 300px;
+    left: 690px;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #logo {
+    position: absolute;
+    float: left;
+    left: 80px;
+  }
+  #background-img h1 { 
+    color: white;
+    font-style: italic;
+    font-size: 40px;
+    font-family: Times New Roman Georgia;
+    margin: auto;
+    width: 50%;
+    border: 3px black;
+    padding: 150px 0px 0px 220px; 
+  }
+  #SearchBar {
+    position: absolute;
+    float: right;
+    right: 110px;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+  }
+  #quote h3 {
+    position: absolute;
+    left: 470px;
+    top: 10px;
+    float: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 30px;
+  }
+  #quote h1 {
+    position: absolute;
+    left: 420px;
+    bottom: 130px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 70px;
+  }
+  #quote p {
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16.5px;
+    color: white;
+    float: center;
+    left: 155px;
+    top: 160px;
+    text-align: center;
+  }
+  #carrerList {
+    position: relative;
+    float: center;
+    max-width: 76%;
+    left: 215px; 
+    border-style: outset;
+    border-color: white;
+    border-width: 10px;
+    padding-left: 20px;
+    box-shadow: 10px 10px 10px #00000033;
+    padding-bottom: 130px;
+  }
+  #carrerList dt {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+    color: black;
+    margin-top: 60px;
+    font-style: italic;
+    font-weight: bold;
+  }
+  #carrerList dd {
+    margin-top: 30px;
+    max-width: 70%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    padding-left: 20px;
+    text-align: justify;
+    word-break: keep-all;
+    word-spacing: 2px;
+  }
+  #carrerList img {
+    border-radius: 20px;
+    float: right;
+    margin-right: 40px;
+    margin-bottom: 15px;
+    border-style: outset;
+    border-color: whitesmoke;
+  }
+  #carrerList a {
+    position: absolute;
+    float: left;
+    left: 400px;
+    bottom: 20px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-width: 2px;
+    padding: 10px 30px 10px 30px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-style: oblique;
+  }
+  #hr {
+    width: 1000px
+  }
+  #signButton {
+    position: absolute;
+    background-color: whitesmoke;
+    border: 5px soild deepskyblue;
+    border-radius: 30px;
+    text-decoration: none;
+    padding: 10px 28px;
+    color: black;
+    margin-top: 10px;
+    display: inline-block;
+    right: 165px;
+    font-size: 15px;
+    font-style: italic;
+  }
+
+  .Holder {
+    position: absolute;
+    background-color: #E5E4E5;
+    float: center;
+    left: 140px;
+    width: 100%;
+    height: 240px;
+    border-style: outset;
+    border-color: white;
+    box-shadow: 10px 10px 10px #00000033;
+    font-family: 'Times New Roman', Times, serif;
+  }
+  .Holder .imglogo {
+    position: absolute;
+    float: left;
+    right: -40px;
+    width: 250px;
+    height: 150px;
+  }
+  .Holder .price {
+    position: absolute;
+    left: 650px;
+    top: 165px;
+  }
+  .Holder .reservebtn {
+    position: absolute;
+    right: 10px;
+    top: 170px;
+    text-decoration: none;
+    color: white;
+    background-color: #505050;
+    padding: 15px;
+    padding-right: 35px;
+    padding-left: 35px;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  #app-form h2 {
+    position: absolute;
+    left: 160px;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 5px 5px 5px #00000033;
+  }
+  #app-form form {
+    position: absolute;
+    left: 400px;
+    top: 110px;
+    border-style: outset;
+    background-color: whitesmoke;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 50px;
+    padding-bottom: 10px;
+  }
+
+  #heading {
+    position: relative;
+    max-width: 80%;
+    margin-top: 20px;
+    left: 180px;
+  }
+  .reserve {
+    position: relative;
+    max-width: 730px;
+    border-radius: 5px;
+    border-color: #E6E6E6;
+    border-style: solid;
+    left: 360px;
+    top: 100px;
+    padding-bottom: 320px;
+  }
+  .reserve .top-content {
+    position: absolute;
+    background-color: white;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-style: solid;
+    border-color: #E6E6E6;
+    padding-right: 730px;
+    padding-bottom: 60px;
+  }
+  .reserve .bottom-content {
+    position: absolute;
+    background-color: #F2F1F1;
+    top: 61px;
+    padding-right: 730px;
+    padding-bottom: 259px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+  #reserveNowbtn {
+    position: absolute;
+    margin-top: 20px;
+    width: 515px;
+    height: 30px;
+    left: 110px;
+    top: 250px;
+    border-style: solid;
+    border-radius: 15px;
+    border-color: #E6E6E6;
+    padding: 16px 0px 29px 0px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+  }
+  #contact {
+    position: fixed;
+    right: -10px;
+    bottom: 0;
+    text-decoration: none;
+    color: deepskyblue;
+    background-color: white;
+    padding: 15px 25px 10px 25px;
+    border-style: outset;
+    border-color: deepskyblue;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  } 
+  #contact-content h2 {
+    position: absolute;
+    width: 500px;
+    left: 500px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-style: italic;
+  }
+  #contact-content img {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+  }
+  #contact-content form {
+    position: absolute;
+    display: block;
+    left: 600px;
+    top: 210px;
+  }
+  #map {
+    position: relative;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    width: 450px;
+    height: 300px;
+    left: 670px;
+  }
+}

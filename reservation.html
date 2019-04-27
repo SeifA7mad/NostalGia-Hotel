@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+        <head>
+                <title> NostalGia Hotel </title>
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <link rel="stylesheet" href="Hotel.css">
+                <link rel="shortcut icon" href="logo.gif">
+            </head>
+            
+            <body>
+                <div id="top-container">
+                    <div id="logo">
+                        <a href="index.html"> <img src="logo.gif" alt="NosatlGia Logo" width=250 height=150> </a>
+                    </div>
+                    <nav class="navbar">
+                         <div class="dropdown">
+                            <button class="dropbtn"> <a href="index.html"> Home </a></button>
+                         </div>
+                        <div class="dropdown">
+                            <button class="dropbtn"> <a href="Hotel.html"> Hotel </a></button>
+                            <div class="dropdown-content">
+                                <a href="hotel.html#sharm"> Sharm Elshekh </a>
+                                <a href="hotel.html#paris"> Paris </a>
+                                <a href="hotel.html#venice"> Venice </a>
+                                <a href="hotel.html#england"> England </a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn"> <a href="Event.html"> Event </a></button>
+                            <div class="dropdown-content">
+                                <a href="event.html#business"> Business Meetings </a>
+                                <a href="event.html#weeding"> Weddings </a>
+                                <a href="event.html#social"> Social Events </a>
+                                <a href="event.html#group"> Group Travel </a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn"> <a href="Career.html"> Career </a></button>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn"> <a href="about.html"> About NostalGia </a></button>
+                        </div>
+                        <div id="SearchBar">
+                            <input type="text" placeholder="Search..">
+                        </div>
+                    </nav>
+                    <div id="background-img">
+                        <h1> Welcome to NostalGia Hotels </h1>
+                    </div>
+                    </div>
+
+                    <div id="heading">
+                    <img src="lock.png" alt="lock" width="30" height="40">
+                    <h3> Secure booking </h3>
+                    </div>
+
+                    <div class="reserve">
+                        <div class="top-content">
+                            <img src="hotelicon.png" alt="hotel icon" width="50" height="50">
+                            <h2> Step 1: Booking details </h2>
+                        </div>
+                        <div class="bottom-content">
+                            <form>
+                                <h4> Location </h4>
+                                <select name="location" style="width:300px; height:25px; position: absolute; bottom:-10px;">
+                                    <option value="Sharm Elshekh"> Sharm Elshekh </option>
+                                    <option value="Paris"> Paris </option>
+                                    <option value="Venice"> Venice </option>
+                                    <option value="England"> England </option>
+                                    </select>
+                                <h4 class="right-content" style="bottom: -3px; width: 500px;"> Check In </h4>
+                                <input class="right-content" type="date" style="width: 100px; height: 20px;">
+                                <h4 class="right-content" style="bottom: -3px; width: 500px; left: 620px;"> Check out </h4>
+                                <input class="right-content" type="date" style="width: 100px; height: 20px; left: 620px;">
+                                <h2> Booking Type: </h2>
+                                <a href="#room"> <h3> Room </h3> </a>
+                                <a href="#event"> <h3 style=" left: 450px;"> Event </h3> </a>
+                            </form>
+                        </div>
+                    </div>
+                    <br>  
+                    <div class="reserve" id="room">
+                            <div class="top-content">
+                                <img src="roomicon.png" alt="room icon" width="50" height="50">
+                                <h2> Room Details </h2>
+                            </div>
+                            <div class="bottom-content">
+                                <form>
+                                    <h4> Room Type </h4>
+                                    <select name="location" style="width:300px; height:25px; position: absolute; bottom:-10px;">
+                                        <option value="single"> Single </option>
+                                        <option value="double"> Double </option>
+                                        <option value="tripple"> Tripple </option>
+                                    </select>
+                                    <h4 style="position: absolute; top: 80px; width: 250px;"> Number Of Adults </h4>
+                                    <input style="position: absolute;top: 130px;" type="number">
+                                    <h4 style="position: absolute; left: 400px; top: 80px; width: 250px;"> Number Of Childrens </h4>
+                                    <input style="position: absolute; left: 400px; top: 130px;" type="number">
+                                    <h4 style="position: absolute; top: 150px; width: 250px;"> Room View </h4>
+                                    <select name="location" style="width:300px; height:25px; position: absolute;top: 200px;">
+                                        <option value="Pool"> Pool </option>
+                                        <option value="Garden"> Garden </option>
+                                        <option value="Sea"> Sea </option>
+                                    </select>
+                                    <h4 style="position: absolute; left: 420px; top: 80px; width: 250px; top: 178px;"> Somking Included? </h4>
+                                    <input style="position: absolute; left: 395px; top: 200px;" type="checkbox">
+                                </form>
+                            </div>
+                        </div>
+                    <br>  
+                    <div class="reserve" id="event">
+                            <div class="top-content">
+                                <img src="eventicon.png" alt="event icon" width="50" height="50">
+                                <h2> Event Details </h2>
+                            </div>
+                            <div class="bottom-content">
+                                <form>
+                                    <h4> Event Type </h4>
+                                    <select name="location" style="width:300px; height:25px; position: absolute; bottom:-10px;">
+                                        <option value="Business Meetings"> Business Meetings </option>
+                                        <option value="Weeding"> Weeding </option>
+                                        <option value="Social Event"> Social Event </option>
+                                        <option value="Group Travel"> Group Travel </option>
+                                    </select>
+                                    <h4 style="position: absolute; top: 80px; width: 250px;"> Number Of persons </h4>
+                                    <input style="position: absolute;top: 130px;" type="number">
+                                </form>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="reserve">
+                                <div class="top-content">
+                                    <img src="personaldetails.png" alt="personal icon" width="50" height="50">
+                                    <h2> Step 2: Your details </h2>
+                                </div>
+                                <div class="bottom-content">
+                                    <form>
+                                        <h4> First Name </h4>
+                                        <input style="position: absolute ;width: 300px; height:25px;" type="text">
+                                        <h4 style="position: absolute; left: 400px;bottom:-6px;width:100px">Last Name</h4>
+                                        <input style="position: absolute ;width: 300px; height:25px; left:400px;" type="text">
+                                        <h4 style="position:absolute;top:110px;width:150px"> Email Address </h4>
+                                        <input style="position: absolute ;width: 300px; height:25px; top:170px;" type="email">
+                                        <h4 style="position: absolute; left: 400px;bottom:-6px;width:150px;top:110px">Phone number</h4>
+                                        <input style="position: absolute ;width: 300px; height:25px; left:400px;top:170px;" type="text">
+                                    </form>
+                                </div>
+                                
+                            </div>
+                            <br>
+                            <div class="reserve">
+                                    <div class="top-content">
+                                        <img src="lock.png" alt="lock icon" width="50" height="50">
+                                        <img src="visa.png" alt="visa icon" width="50" height="50" style="right: 150px;">
+                                        <img src="mc.png" alt="visa icon" width="50" height="50" style="right: 80px;">
+                                        <h2> Step 3: Payment details </h2>
+                                    </div>
+                                    <div class="bottom-content">
+                                        <form>
+                                            <h4> First Name </h4>
+                                            <input style="position: absolute ;width: 300px; height:25px;" type="text">
+                                            <h4 style="position: absolute; left: 400px;bottom:-6px;width:100px">Last Name</h4>
+                                            <input style="position: absolute ;width: 300px; height:25px; left:400px;" type="text">
+                                            <h4 style="position:absolute;top:110px;width:150px"> Card Number </h4>
+                                            <input style="position: absolute ;width: 300px; height:25px; top:170px;" type="text" placeholder="0000 0000 0000 0000">
+                                            <h4 style="position: absolute; left: 400px;bottom:-6px;width:150px;top:110px"> Security Code</h4>
+                                            <input style="position: absolute ;width: 30px; height:25px; left:400px;top:170px;" type="text" placeholder="000">
+                                            <h4 style="position: absolute; left: 600px;bottom:-6px;width:150px;top:110px"> Expire Date </h4>
+                                            <input style="position: absolute ;width: 30px; height:25px; left:600px;top:170px;" type="text" placeholder="MM"> <input style="position: absolute ;width: 30px; height:25px; left:640px;top:170px;" type="text" placeholder="YY">
+                                            <button id="reserveNowbtn"> Reserve Now </button> 
+                                        </form>
+                                    </div>
+                                </div>
+                               
+                                 
+                            
+                                <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                                <hr id="hr">
+                </body>
+
+                <footer>
+                    <p>Copyright &copy; 2019 NostalGia International , Inc. All Rights Reserved. NostalGia Proprietary Information <br> <br> Telephone number +21060917380 &nbsp; &nbsp; Fax number +4379569679  &nbsp; &nbsp; E-mail: NostalGiaHotels@yahoo.com <br> <br> NEW CAIRO <br> <span style="position: absolute; bottom: -5px">75 Road 90 5th settlement</span> </p>
+                    <div id="footer">
+                        <h5> Follow Us </h5>
+                        <a href="https://www.facebook.com/"> <img style="left: 480px;" src="facebook.png" alt="facebook icon"> </a>
+                        <a href="https://twitter.com/"> <img style="left: 540px;" src="twitter.png" alt="twitter icon"> </a> 
+                        <a href="https://www.youtube.com/" > <img style="left: 600px;" src="youtube.png" alt="youtupe icon"> </a>
+                    </div>
+                </footer>
+</html>
